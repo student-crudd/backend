@@ -17,7 +17,10 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v6
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: https://sonarcloud.io
         with:
           args: >
             -Dsonar.projectKey=student-crudd_backend
             -Dsonar.organization=student-crudd
+            -Dsonar.sources=src/main/java
+            -Dsonar.java.binaries=target/classes
