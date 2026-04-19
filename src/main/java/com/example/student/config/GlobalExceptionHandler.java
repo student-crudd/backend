@@ -14,6 +14,6 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(StudentNotFoundException.class)
     public ResponseEntity<Map<String, String>> handleStudentNotFound(StudentNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body(Map.of("error", ex.getMessage()));
+                       .body(Map.of("error", ex.getMessage()));
     }
 }
